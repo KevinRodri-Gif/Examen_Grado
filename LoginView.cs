@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace login
+namespace DegreeExamen
 {
     public partial class Form1 : Form
     {
@@ -57,8 +57,6 @@ namespace login
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-     
+        }     
     }
 }
