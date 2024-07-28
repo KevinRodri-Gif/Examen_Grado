@@ -24,26 +24,17 @@ namespace DegreeExamen
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void textBox2password_ParentChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
             string email = TextBoxLoginEmail.Text;
             string password = TextBoxLoginPassword.Text;
             BaseController controller = new LoginController(email, password);
             controller.Handle();
+        }
+
+        private void CloseButtonClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

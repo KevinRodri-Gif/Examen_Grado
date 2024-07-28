@@ -35,7 +35,7 @@ namespace DegreeExamen
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ButtonLogin = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CloseButtonClose = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -62,7 +62,6 @@ namespace DegreeExamen
             this.TextBoxLoginPassword.Size = new System.Drawing.Size(234, 20);
             this.TextBoxLoginPassword.TabIndex = 1;
             this.TextBoxLoginPassword.UseSystemPasswordChar = true;
-            this.TextBoxLoginPassword.ParentChanged += new System.EventHandler(this.textBox2password_ParentChanged);
             // 
             // label1
             // 
@@ -94,15 +93,15 @@ namespace DegreeExamen
             this.ButtonLogin.UseVisualStyleBackColor = true;
             this.ButtonLogin.Click += new System.EventHandler(this.ButtonLogin_Click);
             // 
-            // button1
+            // CloseButtonClose
             // 
-            this.button1.Location = new System.Drawing.Point(147, 299);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Cerrar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.CloseButtonClose.Location = new System.Drawing.Point(147, 299);
+            this.CloseButtonClose.Name = "CloseButtonClose";
+            this.CloseButtonClose.Size = new System.Drawing.Size(114, 23);
+            this.CloseButtonClose.TabIndex = 5;
+            this.CloseButtonClose.Text = "Cerrar";
+            this.CloseButtonClose.UseVisualStyleBackColor = true;
+            this.CloseButtonClose.Click += new System.EventHandler(this.CloseButtonClose_Click);
             // 
             // label3
             // 
@@ -151,14 +150,13 @@ namespace DegreeExamen
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.TextBoxLoginEmail);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.CloseButtonClose);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.ButtonLogin);
             this.panel2.Location = new System.Drawing.Point(278, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(319, 350);
             this.panel2.TabIndex = 9;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // LoginView
             // 
@@ -186,7 +184,7 @@ namespace DegreeExamen
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ButtonLogin;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CloseButtonClose;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
