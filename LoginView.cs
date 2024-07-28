@@ -8,41 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DegreeExamen.App.Controllers;
+using DegreeExamen.App.Controllers.Auth;
 
 namespace DegreeExamen
 {
-    public partial class Form1 : Form
+    public partial class LoginView : Form
     {
-        public Form1()
+        public LoginView()
         {
             InitializeComponent();
         }
-        private void Form1_Load(object sender, EventArgs e)
+        private void LoginView_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1iniciosesion_Click(object sender, EventArgs e)
-        {
-
-            SqlConnection conexion = new SqlConnection("server=DESKTOP-RCFOEPO\\SQLEXPRESS; database=Sistema; integrated security=true");
-
-            conexion.Open();
-            string consulta = "select nombre,clave from usuario where nombre='"+TextBotLoginEmail.Text+ "'and clave='"+textBox2password.Text + "'";
-            SqlCommand comando = new SqlCommand(consulta, conexion);
-
-            SqlDataReader registro = comando.ExecuteReader();
-          
-            if (registro.Read())
-            {
-
-                MessageBox.Show("Bienvenido");
-            }
-            else
-            {
-                MessageBox.Show("Usuario o contraseña incorrecto");
-            }
-     
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -61,7 +40,10 @@ namespace DegreeExamen
 
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
-
+            string email = TextBoxLoginEmail.Text;
+            string password = TextBoxLoginPassword.Text;
+            BaseController controller = new LoginController(email, password);
+            controller.Handle();
         }
     }
 }

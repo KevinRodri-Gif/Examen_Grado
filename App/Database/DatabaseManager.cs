@@ -12,6 +12,12 @@ namespace DegreeExamen.App.Database
     {
         private static DatabaseManager _Instance;
         private readonly SqlConnection Connection;
+        private IList<string> Commands = new List<string>();
+
+        private string JoinedCommands
+        {
+            get => string.Join(" ", Commands.ToArray());
+        }
 
         private DatabaseManager()
         {
@@ -24,9 +30,26 @@ namespace DegreeExamen.App.Database
             return _Instance ?? (_Instance = new DatabaseManager());
         }
 
+        public void Open()
+        {
+            Connection.Open();
+        }
+
         public void Close()
         {
             Connection.Close();
+        }
+
+        public DatabaseManager Statement(string statement)
+        {
+            Commands.Add(statement);
+            return this;
+        }
+
+        public SqlDataReader Execute()
+        {
+            SqlCommand command = new SqlCommand(JoinedCommands, Connection);
+            return command.ExecuteReader();
         }
     }
 }

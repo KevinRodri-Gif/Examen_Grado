@@ -1,7 +1,7 @@
 ﻿
 namespace DegreeExamen
 {
-    partial class Form1
+    partial class LoginView
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,9 +29,9 @@ namespace DegreeExamen
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.TextBotLoginEmail = new System.Windows.Forms.TextBox();
-            this.textBox2password = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginView));
+            this.TextBoxLoginEmail = new System.Windows.Forms.TextBox();
+            this.TextBoxLoginPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ButtonLogin = new System.Windows.Forms.Button();
@@ -47,23 +47,22 @@ namespace DegreeExamen
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TextBotLoginEmail
+            // TextBoxLoginEmail
             // 
-            this.TextBotLoginEmail.ForeColor = System.Drawing.Color.Black;
-            this.TextBotLoginEmail.Location = new System.Drawing.Point(27, 184);
-            this.TextBotLoginEmail.Name = "TextBotLoginEmail";
-            this.TextBotLoginEmail.Size = new System.Drawing.Size(234, 20);
-            this.TextBotLoginEmail.TabIndex = 0;
-            this.TextBotLoginEmail.Text = "ID o Email";
+            this.TextBoxLoginEmail.ForeColor = System.Drawing.Color.Black;
+            this.TextBoxLoginEmail.Location = new System.Drawing.Point(27, 184);
+            this.TextBoxLoginEmail.Name = "TextBoxLoginEmail";
+            this.TextBoxLoginEmail.Size = new System.Drawing.Size(234, 20);
+            this.TextBoxLoginEmail.TabIndex = 0;
             // 
-            // textBox2password
+            // TextBoxLoginPassword
             // 
-            this.textBox2password.Location = new System.Drawing.Point(27, 250);
-            this.textBox2password.Name = "textBox2password";
-            this.textBox2password.Size = new System.Drawing.Size(234, 20);
-            this.textBox2password.TabIndex = 1;
-            this.textBox2password.UseSystemPasswordChar = true;
-            this.textBox2password.ParentChanged += new System.EventHandler(this.textBox2password_ParentChanged);
+            this.TextBoxLoginPassword.Location = new System.Drawing.Point(27, 250);
+            this.TextBoxLoginPassword.Name = "TextBoxLoginPassword";
+            this.TextBoxLoginPassword.Size = new System.Drawing.Size(234, 20);
+            this.TextBoxLoginPassword.TabIndex = 1;
+            this.TextBoxLoginPassword.UseSystemPasswordChar = true;
+            this.TextBoxLoginPassword.ParentChanged += new System.EventHandler(this.textBox2password_ParentChanged);
             // 
             // label1
             // 
@@ -148,9 +147,9 @@ namespace DegreeExamen
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox2password);
+            this.panel2.Controls.Add(this.TextBoxLoginPassword);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.TextBotLoginEmail);
+            this.panel2.Controls.Add(this.TextBoxLoginEmail);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -161,16 +160,16 @@ namespace DegreeExamen
             this.panel2.TabIndex = 9;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // Form1
+            // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(597, 351);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form1";
+            this.Name = "LoginView";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.LoginView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -182,8 +181,8 @@ namespace DegreeExamen
 
         #endregion
 
-        private System.Windows.Forms.TextBox TextBotLoginEmail;
-        private System.Windows.Forms.TextBox textBox2password;
+        private System.Windows.Forms.TextBox TextBoxLoginEmail;
+        private System.Windows.Forms.TextBox TextBoxLoginPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ButtonLogin;
