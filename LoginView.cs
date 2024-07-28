@@ -28,7 +28,7 @@ namespace DegreeExamen
             SqlConnection conexion = new SqlConnection("server=DESKTOP-RCFOEPO\\SQLEXPRESS; database=Sistema; integrated security=true");
 
             conexion.Open();
-            string consulta = "select nombre,clave from usuario where nombre='"+textBox1user.Text+ "'and clave='"+textBox2password.Text + "'";
+            string consulta = "select nombre,clave from usuario where nombre='"+TextBotLoginEmail.Text+ "'and clave='"+textBox2password.Text + "'";
             SqlCommand comando = new SqlCommand(consulta, conexion);
 
             SqlDataReader registro = comando.ExecuteReader();
@@ -57,6 +57,11 @@ namespace DegreeExamen
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
-        }     
+        }
+
+        private void ButtonLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

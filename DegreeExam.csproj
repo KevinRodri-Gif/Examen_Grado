@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App\Config\DatabaseConfig.cs" />
+    <Compile Include="App\Database\DatabaseManager.cs" />
     <Compile Include="LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
