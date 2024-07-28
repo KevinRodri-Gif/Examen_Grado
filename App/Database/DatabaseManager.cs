@@ -1,10 +1,7 @@
 ﻿using DegreeExamen.App.Config;
-using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DegreeExamen.App.Database
 {
@@ -49,6 +46,7 @@ namespace DegreeExamen.App.Database
         public SqlDataReader Execute()
         {
             SqlCommand command = new SqlCommand(JoinedCommands, Connection);
+            Commands.Clear();
             return command.ExecuteReader();
         }
     }
