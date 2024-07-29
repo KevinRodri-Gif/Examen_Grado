@@ -1,4 +1,7 @@
 ﻿using DegreeExamen.App.Commands.Auth;
+using DegreeExamen.App.Controllers.Exceptions;
+using DegreeExamen.App.Models;
+using System;
 using System.Threading.Tasks;
 
 namespace DegreeExamen.App.Controllers.Auth
@@ -12,8 +15,14 @@ namespace DegreeExamen.App.Controllers.Auth
 
         public override Task Handle()
         {
-            Command.Handle();
-            return Task.CompletedTask;
+            try
+            {
+                return Command.Handle();
+            }
+            catch (Exception exception)
+            {
+                throw new ControllerException(exception.Message);
+            }
         }
     }
 }

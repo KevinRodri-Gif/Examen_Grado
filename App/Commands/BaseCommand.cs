@@ -1,4 +1,5 @@
 ﻿using DegreeExamen.App.Database;
+using DegreeExamen.App.Models;
 using System.Threading.Tasks;
 
 namespace DegreeExamen.App.Commands

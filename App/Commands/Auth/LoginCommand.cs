@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DegreeExamen.App.Models;
+using System;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 
