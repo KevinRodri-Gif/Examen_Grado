@@ -29,10 +29,7 @@ namespace DegreeExamen
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginView));
-            this.ErrorProvidertxtpassword = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ErrorProvidertxtEmail = new System.Windows.Forms.ErrorProvider(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ButtonLogin = new System.Windows.Forms.Button();
@@ -45,20 +42,10 @@ namespace DegreeExamen
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvidertxtpassword)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvidertxtEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ErrorProvidertxtpassword
-            // 
-            this.ErrorProvidertxtpassword.ContainerControl = this;
-            // 
-            // ErrorProvidertxtEmail
-            // 
-            this.ErrorProvidertxtEmail.ContainerControl = this;
             // 
             // label5
             // 
@@ -201,8 +188,6 @@ namespace DegreeExamen
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.LoginView_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvidertxtpassword)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvidertxtEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -212,8 +197,6 @@ namespace DegreeExamen
         }
 
         #endregion
-        private System.Windows.Forms.ErrorProvider ErrorProvidertxtpassword;
-        private System.Windows.Forms.ErrorProvider ErrorProvidertxtEmail;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;

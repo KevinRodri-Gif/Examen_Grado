@@ -8,8 +8,5 @@ namespace DegreeExamen.App.Controllers
         protected BaseCommand Command;
 
         public abstract Task Handle();
-
-       
     }
-
 }

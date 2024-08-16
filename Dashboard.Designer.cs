@@ -1,5 +1,5 @@
 ﻿
-namespace login
+namespace DegreeExamen
 {
     partial class Dashboard
     {

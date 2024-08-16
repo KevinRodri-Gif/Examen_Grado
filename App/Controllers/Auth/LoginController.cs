@@ -1,6 +1,5 @@
 ﻿using DegreeExamen.App.Commands.Auth;
 using DegreeExamen.App.Controllers.Exceptions;
-using DegreeExamen.App.Models;
 using System;
 using System.Threading.Tasks;
 

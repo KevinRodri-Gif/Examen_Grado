@@ -19,10 +19,21 @@ namespace DegreeExamen
 
         private void ButtonLogin_Click(object sender, EventArgs e)
         {
-            string email = TextBoxLoginEmail.Text;
-            string password = TextBoxLoginPassword.Text;
-            BaseController controller = new LoginController(email, password);
- 
+            try
+            {
+                string email = TextBoxLoginEmail.Text;
+                string password = TextBoxLoginPassword.Text;
+                BaseController controller = new LoginController(email, password);
+                controller.Handle();
+
+                // TODO: Create a UI helper to handle the switching between screens
+                new Dashboard().Show();
+                Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
         }
 
 
